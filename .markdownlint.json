@@ -9,7 +9,7 @@
   "MD009": { "br_spaces": 2 },
   "MD010": false,
   "MD012": true,
-  "MD013": { "line_length": 120, "ignore_code_blocks": true },
+ "MD013": { "line_length": 120 },
   "MD014": false,
   "MD018": true,
   "MD019": true,
