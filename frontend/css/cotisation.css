@@ -170,7 +170,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff; /* Couleur du texte */
+    color: hsl(254, 81%, 34%); /* Couleur du texte */
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Ombre pour améliorer la lisibilité */
 }

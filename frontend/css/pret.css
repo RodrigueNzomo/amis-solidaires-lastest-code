@@ -35,7 +35,7 @@ body {
 
 /* Formulaire d'ajout de prêt */
 .pret-form {
-    background: #ffffff;
+    background: hsl(184, 94%, 32%);
     padding: 40px;
     max-width: 600px;
     margin: 0 auto;
@@ -89,7 +89,7 @@ body {
 /* Boutons secondaires */
 .btn-secondary {
     background-color: #6c757d;
-    color: #fff;
+    color: hsl(0, 85%, 32%);
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
     border-radius: 15px;
@@ -176,7 +176,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff; /* Couleur du texte */
+    color: hsl(145, 88%, 30%); /* Couleur du texte */
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Ombre pour améliorer la lisibilité */
 }
