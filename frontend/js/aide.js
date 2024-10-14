@@ -2,10 +2,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const aideForm = document.getElementById("aideForm");
-
   if (aideForm) {
     aideForm.addEventListener("submit", handleSubmit);
   }
+  fetchAides();
 });
 
 async function handleSubmit(event) {
@@ -25,19 +25,13 @@ async function handleSubmit(event) {
     });
 
     const data = await response.json();
-
-    if (response.ok) {
-      alert("Aide enregistrée avec succès");
-      window.location.reload();
-    } else {
-      alert(data.message || "Erreur lors de l'enregistrement de l'aide");
-    }
+    handleResponse(response, data);
   } catch (error) {
-    console.error("Erreur:", error);
-    alert("Une erreur est survenue lors de la requête");
+    handleError(error);
   }
 }
-document.addEventListener("DOMContentLoaded", async () => {
+
+async function fetchAides() {
   try {
     const response = await fetch("/api/aides", {
       headers: {
@@ -45,20 +39,36 @@ document.addEventListener("DOMContentLoaded", async () => {
       },
     });
     const aides = await response.json();
-
-    if (response.ok) {
-      const aidesContainer = document.getElementById("aidesContainer");
-      aides.forEach((aide) => {
-        const aideElement = document.createElement("div");
-        aideElement.classList.add("aide-item");
-        aideElement.textContent = `${aide.beneficiaire} - ${aide.montant} - ${aide.motif}`;
-        aidesContainer.appendChild(aideElement);
-      });
-    } else {
-      alert(aides.message || "Erreur lors de la récupération des aides");
-    }
+    handleResponse(response, aides, true);
   } catch (error) {
-    console.error("Erreur:", error);
-    alert("Une erreur est survenue lors de la requête");
+    handleError(error);
   }
-});
+}
+
+function handleResponse(response, data, isFetch = false) {
+  if (response.ok) {
+    if (isFetch) {
+      displayAides(data);
+    } else {
+      alert("Aide enregistrée avec succès");
+      window.location.reload();
+    }
+  } else {
+    alert(data.message || "Erreur lors de l'enregistrement de l'aide");
+  }
+}
+
+function displayAides(aides) {
+  const aidesContainer = document.getElementById("aidesContainer");
+  aides.forEach((aide) => {
+    const aideElement = document.createElement("div");
+    aideElement.classList.add("aide-item");
+    aideElement.textContent = `${aide.beneficiaire} - ${aide.montant} - ${aide.motif}`;
+    aidesContainer.appendChild(aideElement);
+  });
+}
+
+function handleError(error) {
+  console.error("Erreur:", error);
+  alert("Une erreur est survenue lors de la requête");
+}

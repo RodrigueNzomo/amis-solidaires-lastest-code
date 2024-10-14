@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (cotisationForm) {
     cotisationForm.addEventListener("submit", handleCotisationSubmit);
   }
+
+  loadCotisations();
 });
 
 async function handleCotisationSubmit(event) {
@@ -37,9 +39,9 @@ async function handleCotisationSubmit(event) {
     alert("Une erreur est survenue lors de la requête");
   }
 }
-document.addEventListener("DOMContentLoaded", async () => {
+
+async function loadCotisations() {
   try {
-    // Effectuer une requête GET vers l'API des cotisations
     const response = await fetch("/api/cotisations", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -48,11 +50,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const cotisations = await response.json();
 
     if (response.ok) {
-      // Sélectionner le conteneur qui affichera les cotisations
       const cotisationsContainer = document.getElementById(
         "cotisationsContainer"
       );
-      // Parcourir la liste des cotisations et les ajouter au conteneur
       cotisations.forEach((cotisation) => {
         const cotisationElement = document.createElement("div");
         cotisationElement.classList.add("cotisation-item");
@@ -68,4 +68,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Erreur:", error);
     alert("Une erreur est survenue lors de la requête");
   }
-});
+}

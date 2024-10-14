@@ -1,54 +1,188 @@
 /* aide.css */
 
+/* Styles généraux */
 body {
     background: linear-gradient(to right, #6dd5ed, #2193b0);
     font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
+/* Section d'aide */
 .aide-section {
     text-align: center;
-    padding: 50px;
+    padding: 60px;
     color: #fff;
 }
 
 .aide-title {
-    font-size: 36px;
+    font-size: 3rem;
     font-weight: bold;
-    color: #f5f5f5;
+    color: #007bff;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s;
 }
 
 .aide-description {
     margin: 20px auto;
-    font-size: 18px;
-    width: 80%;
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    animation: fadeIn 1.5s;
 }
 
+/* Formulaire d'aide */
 .aide-form {
-    background: #fff;
+    background: #ffffff;
     padding: 40px;
     max-width: 600px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 1.5s;
 }
 
+.form-label {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    border-radius: 15px;
+    padding: 15px;
+    border: 1px solid #ced4da;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton de soumission */
 .btn-submit {
-    background: #FF5722;
-    color: white;
+    background: #ff5722;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-submit:hover {
     background: #e64a19;
+    transform: scale(1.05);
 }
 
 /* Image de fond de la section aide */
 .aide-background {
     background: url('../assets/imgMetier/aide.jpg') no-repeat center center;
     background-size: cover;
-    height: 300px;
+    height: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+/* Message de confirmation */
+.aide-confirmation {
+    font-size: 1.5rem;
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+/* Animation fadeIn pour un effet d'apparition */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation pour un effet d'apparition du bas vers le haut */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .aide-title {
+        font-size: 2.5rem;
+    }
+
+    .aide-description {
+        font-size: 1.2rem;
+    }
+
+    .aide-form {
+        padding: 30px;
+    }
+
+    .form-control {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .btn-submit {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+.header-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Ajustez la hauteur selon vos besoins */
+    overflow: hidden;
+    margin-bottom: 30px; /* Espacement sous le conteneur */
+}
+
+.header-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/imgMetier/aide.jpg') no-repeat center center;
+    background-size: cover;
+    animation: moveBackground 20s linear infinite; /* Animation pour bouger l'image */
+}
+
+.header-container h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; /* Couleur du texte */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Ombre pour améliorer la lisibilité */
+}
+
+/* Animation pour bouger l'image */
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 

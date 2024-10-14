@@ -1,14 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const pretForm = document.getElementById("pretForm");
-
   if (pretForm) {
     pretForm.addEventListener("submit", handleFormSubmit);
   }
+  fetchPrets();
 });
 
 async function handleFormSubmit(event) {
   event.preventDefault();
-
   const formData = new FormData(event.target);
   const pretData = {
     beneficiaire: formData.get("beneficiaire"),
@@ -27,7 +26,6 @@ async function handleFormSubmit(event) {
     });
 
     const data = await response.json();
-
     if (response.ok) {
       alert("Prêt enregistré avec succès");
       window.location.reload();
@@ -39,7 +37,8 @@ async function handleFormSubmit(event) {
     alert("Une erreur est survenue lors de la requête");
   }
 }
-document.addEventListener("DOMContentLoaded", async () => {
+
+async function fetchPrets() {
   try {
     const response = await fetch("/api/prets", {
       headers: {
@@ -47,7 +46,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       },
     });
     const prets = await response.json();
-
     if (response.ok) {
       const pretsContainer = document.getElementById("pretsContainer");
       prets.forEach((pret) => {
@@ -63,4 +61,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Erreur:", error);
     alert("Une erreur est survenue lors de la requête");
   }
-});
+}

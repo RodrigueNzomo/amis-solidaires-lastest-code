@@ -5,108 +5,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amis Solidaires - Prêts</title>
+
+    <!-- CSS principal -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="../css/pret.css">
-    <title>Amis Solidaires - Prêts</title>
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- FontAwesome CSS pour l'icône de mot de passe -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha384-k6RqeWeci5ZR/Lv4MR0z4UlasS0vIT1JxlzuKHCpFEL7C5fVb8mWw4DlG8eZOC13" crossorigin="anonymous">
-    <!-- Lien vers FontAwesome pour les icônes -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha384-k6RqeWeci5ZR/Lv4MR0z4UlasS0vIT1JxlzuKHCpFEL7C5fVb8mWw4DlG8eZOC13" crossorigin="anonymous">
 
+    <!-- FontAwesome CSS pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0z4UlasS0vIT1JxlzuKHCpFEL7C5fVb8mWw4DlG8eZOC13" crossorigin="anonymous">
 </head>
 
 <body>
-    <header>
-        <h1>Gestion des Prêts</h1>
-        <div id="pretsContainer"></div> <!-- Conteneur pour les prets -->
-        <nav>
-            <a href="dashboard.html">Tableau de Bord</a>
-            <a href="membre.html">Membres</a>
-            <a href="cotisation.html">Cotisations</a>
-            <a href="pret.html">Prêts</a>
-            <a href="aide.html">Aides</a>
-        </nav>
+    <header class="bg-info text-white py-4 mb-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="header-container">
+                    <h1 class="display-4">Gestion des Prêts</h1>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Tableau de Bord</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="membre.html">Membres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cotisation.html">Cotisations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="pret.html">Prêts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aide.html">Aides</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <form id="pretForm">
-            <label for="beneficiaire">Bénéficiaire:</label>
-            <select id="beneficiaire" name="beneficiaire">
-                <!-- Les options de membres seront ajoutées dynamiquement -->
-            </select>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="pretForm" class="bg-light p-4 rounded shadow-sm">
+                        <div class="mb-3">
+                            <label for="beneficiaire" class="form-label">Bénéficiaire :</label>
+                            <select id="beneficiaire" name="beneficiaire" class="form-select" required>
+                                <!-- Les options de membres seront ajoutées dynamiquement -->
+                            </select>
+                        </div>
 
-            <label for="montant">Montant:</label>
-            <input type="number" id="montant" name="montant" required>
+                        <div class="mb-3">
+                            <label for="montant" class="form-label">Montant :</label>
+                            <input type="number" id="montant" name="montant" class="form-control" required>
+                        </div>
 
-            <label for="interet">Taux d'intérêt (%):</label>
-            <input type="number" id="interet" name="interet" required>
+                        <div class="mb-3">
+                            <label for="interet" class="form-label">Taux d'intérêt (%) :</label>
+                            <input type="number" id="interet" name="interet" class="form-control" required>
+                        </div>
 
-            <label for="duree">Durée (en mois):</label>
-            <input type="number" id="duree" name="duree" required>
+                        <div class="mb-3">
+                            <label for="duree" class="form-label">Durée (en mois) :</label>
+                            <input type="number" id="duree" name="duree" class="form-control" required>
+                        </div>
 
-            <button type="submit">Enregistrer le Prêt</button>
-        </form>
+                        <button type="submit" class="btn btn-primary w-100">Enregistrer le Prêt</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
-    </section>
 
     <!-- Pied de page -->
-    <footer class="footer bg-light text-center text-lg-start mt-5">
-        <div class="container p-4">
+    <footer class="footer bg-light text-center text-lg-start mt-5 py-4">
+        <div class="container">
             <!-- Logo et Remerciement -->
             <div class="text-center mb-4">
-                <img src="../frontend/assets/images/community-hands.jpeg" alt="Communauté des Mains"
-                    class="feature-icon mb-2">
-                <p>© 2024 Amis Solidaires | Développé par Rodrigue Nzomo</p>
+                <img src="../assets/images/helping-hand.avif" alt="Communauté des Mains" class="feature-icon mb-2"
+                    style="width: 150px;">
+                <p class="mb-1">© 2024 Amis Solidaires | Développé par Rodrigue Nzomo</p>
             </div>
 
-
-
             <!-- Liens de réseaux sociaux -->
-            <div class="btn-group">
+            <div class="d-flex justify-content-center gap-3 mb-3">
                 <a href="https://www.facebook.com/nzomonzogangrodrigue/" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-primary">
+                    class="btn btn-primary d-flex align-items-center gap-2">
                     <i class="fab fa-facebook-f"></i> Facebook
                 </a>
                 <a href="https://github.com/RodrigueNzomo" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-dark">
+                    class="btn btn-dark d-flex align-items-center gap-2">
                     <i class="fab fa-github"></i> GitHub
                 </a>
                 <a href="https://www.linkedin.com/in/rodrigue-nzogang/" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-primary">
+                    class="btn btn-primary d-flex align-items-center gap-2">
                     <i class="fab fa-linkedin-in"></i> LinkedIn
                 </a>
                 <a href="https://www.instagram.com/rodriguenzogang/" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-danger">
+                    class="btn btn-danger d-flex align-items-center gap-2">
                     <i class="fab fa-instagram"></i> Instagram
                 </a>
             </div>
+
             <!-- Remerciement final -->
             <div class="text-center">
                 <p class="mb-0 text-muted">Merci de nous soutenir dans cette initiative visant à promouvoir l'entraide
-                    et la
-                    solidarité à travers le numérique.</p>
+                    et la solidarité à travers le numérique.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Lien vers FontAwesome pour les icônes -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha384-k6RqeWeci5ZR/Lv4MR0z4UlasS0vIT1JxlzuKHCpFEL7C5fVb8mWw4DlG8eZOC13" crossorigin="anonymous">
-
-
-    <!-- Scripts -->
+    <!-- Scripts Bootstrap et JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
-    <!-- Scripts Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
+        </script>
+
+    <!-- JavaScript personnalisé -->
     <script src="../js/pret.js"></script>
 </body>
 

@@ -2,10 +2,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const membreForm = document.getElementById("membreForm");
-
   if (membreForm) {
     membreForm.addEventListener("submit", handleFormSubmit);
   }
+  fetchMembres();
 });
 
 async function handleFormSubmit(event) {
@@ -39,7 +39,8 @@ async function handleFormSubmit(event) {
     alert("Une erreur est survenue lors de la requête");
   }
 }
-document.addEventListener("DOMContentLoaded", async () => {
+
+async function fetchMembres() {
   try {
     const response = await fetch("/api/membres", {
       headers: {
@@ -63,4 +64,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Erreur:", error);
     alert("Une erreur est survenue lors de la requête");
   }
-});
+}
