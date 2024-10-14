@@ -301,4 +301,5 @@ Veuillez vous assurer de mettre à jour les tests si nécessaire et de suivre no
 ## Licence
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](./LICENSE) pour plus de détails.
 
-Développé avec ❤️ par l'équipe **Amis Solidaires**.
+Développé avec ❤️ par l'équipe **Amis Solidaires**.#   a m i s - s o l i d a i r e s - l a s t e s t - c o d e  
+ 
