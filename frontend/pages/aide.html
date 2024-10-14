@@ -1,0 +1,110 @@
+<!-- aide.html -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/aide.css">
+    <title>Amis Solidaires - Aide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- FontAwesome CSS pour l'icône de mot de passe -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0z4UlasS0vIT1JxlzuKHCpFEL7C5fVb8mWw4DlG8eZOC13" crossorigin="anonymous">
+    <!-- Lien vers FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0z4UlasS0vIT1JxlzuKHCpFEL7C5fVb8mWw4DlG8eZOC13" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <h1>Gestion des Aides</h1>
+        <div id="aidesContainer"></div> <!-- Conteneur pour les membres -->
+        <nav>
+            <a href="dashboard.html">Tableau de Bord</a>
+            <a href="membre.html">Membres</a>
+            <a href="cotisation.html">Cotisations</a>
+            <a href="pret.html">Prêts</a>
+            <a href="aide.html">Aides</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="aideForm">
+            <label for="beneficiaire">Bénéficiaire:</label>
+            <select id="beneficiaire" name="beneficiaire">
+                <!-- Les options de membres seront ajoutées dynamiquement -->
+            </select>
+
+            <label for="montant">Montant:</label>
+            <input type="number" id="montant" name="montant" required>
+
+            <label for="motif">Motif de l'aide:</label>
+            <textarea id="motif" name="motif" required></textarea>
+
+            <button type="submit">Enregistrer l'Aide</button>
+        </form>
+    </main>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="footer bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <!-- Logo et Remerciement -->
+            <div class="text-center mb-4">
+                <img src="../frontend/assets/images/community-hands.jpeg" alt="Communauté des Mains"
+                    class="feature-icon mb-2">
+                <p>© 2024 Amis Solidaires | Développé par Rodrigue Nzomo</p>
+            </div>
+
+
+
+            <!-- Liens de réseaux sociaux -->
+            <div class="btn-group">
+                <a href="https://www.facebook.com/nzomonzogangrodrigue/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://github.com/RodrigueNzomo" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-dark">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/rodrigue-nzogang/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="https://www.instagram.com/rodriguenzogang/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-danger">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+            <!-- Remerciement final -->
+            <div class="text-center">
+                <p class="mb-0 text-muted">Merci de nous soutenir dans cette initiative visant à promouvoir l'entraide
+                    et la
+                    solidarité à travers le numérique.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lien vers FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0z4UlasS0vIT1JxlzuKHCpFEL7C5fVb8mWw4DlG8eZOC13" crossorigin="anonymous">
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <!-- Scripts Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/aide.js"></script>
+</body>
+
+</html>

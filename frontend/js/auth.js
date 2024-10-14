@@ -1,68 +1,75 @@
-// auth.js
+// auth.js (refactorisé)
 
-document.addEventListener('DOMContentLoaded', () => {
-  const loginForm = document.getElementById('loginForm');
-  const registerForm = document.getElementById('registerForm');
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.getElementById("loginForm");
+  const registerForm = document.getElementById("registerForm");
+
+  const handleFormSubmit = async (
+    url,
+    body,
+    successCallback,
+    errorCallback
+  ) => {
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+      });
+      const data = await response.json();
+
+      if (response.ok) {
+        successCallback(data);
+      } else {
+        errorCallback(data.message || "Une erreur est survenue");
+      }
+    } catch (error) {
+      console.error("Erreur:", error);
+      errorCallback("Une erreur est survenue lors de la requête");
+    }
+  };
 
   if (loginForm) {
-    loginForm.addEventListener('submit', async (e) => {
+    loginForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const email = document.getElementById('loginEmail').value;
-      const password = document.getElementById('loginPassword').value;
-      
-      try {
-        const response = await fetch('/api/auth/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email, password }),
-        });
-        const data = await response.json();
-        
-        if (response.ok) {
-          localStorage.setItem('token', data.token);
-          window.location.href = '/dashboard.html';
-        } else {
-          alert(data.message || 'Erreur lors de la connexion');
-        }
-      } catch (error) {
-        console.error('Erreur:', error);
-      }
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+
+      handleFormSubmit(
+        "/api/auth/login",
+        { email, password },
+        (data) => {
+          localStorage.setItem("token", data.token);
+          window.location.href = "/dashboard.html";
+        },
+        (message) => alert(message)
+      );
     });
   }
 
   if (registerForm) {
-    registerForm.addEventListener('submit', async (e) => {
+    registerForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const email = document.getElementById('registerEmail').value;
-      const password = document.getElementById('registerPassword').value;
-      const confirmPassword = document.getElementById('confirmPassword').value;
+      const email = document.getElementById("registerEmail").value;
+      const password = document.getElementById("registerPassword").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
 
       if (password !== confirmPassword) {
-        alert('Les mots de passe ne correspondent pas');
+        alert("Les mots de passe ne correspondent pas");
         return;
       }
-      
-      try {
-        const response = await fetch('/api/auth/register', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email, password }),
-        });
-        const data = await response.json();
-        
-        if (response.ok) {
-          alert('Inscription réussie, vous pouvez maintenant vous connecter');
-          window.location.href = '/login.html';
-        } else {
-          alert(data.message || 'Erreur lors de l'inscription');
-        }
-      } catch (error) {
-        console.error('Erreur:', error);
-      }
+
+      handleFormSubmit(
+        "/api/auth/register",
+        { email, password },
+        () => {
+          alert("Inscription réussie, vous pouvez maintenant vous connecter");
+          window.location.href = "/login.html";
+        },
+        (message) => alert(message)
+      );
     });
   }
 });
