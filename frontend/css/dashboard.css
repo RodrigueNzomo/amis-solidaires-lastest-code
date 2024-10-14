@@ -1,0 +1,295 @@
+/* Styles généraux */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #007bff;
+    padding: 1.2rem;
+}
+
+.navbar-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+    margin-right: 30px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    color: #007bff;
+    background-color: #ffffff;
+}
+
+/* Section d'accueil du tableau de bord */
+.dashboard-section {
+    background: linear-gradient(135deg, #007bff, #00bfff);
+    color: #ffffff;
+    padding: 60px 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    max-width: 1100px;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.dashboard-section h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+    animation: fadeIn 2s;
+}
+
+.dashboard-section p {
+    font-size: 1.4rem;
+    color: #f8f9fa;
+    animation: fadeIn 2s;
+}
+
+/* Section des cartes de fonctionnalités */
+.features-section {
+    padding: 80px 0;
+}
+
+.dashboard-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    overflow: hidden;
+    height: 100%;
+}
+
+.dashboard-card img.feature-icon {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.dashboard-card .card-body {
+    padding: 2rem;
+}
+
+.dashboard-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 15px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Livre d'or */
+.golden-book-section .golden-book-image {
+    max-height: 600px; /* Limiter la hauteur maximale */
+    object-fit: cover; /* Pour s'assurer que les images remplissent bien leur conteneur */
+    border-radius: 10px; /* Pour une apparence plus soignée */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Pied de page */
+.footer {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    color: #333;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer .feature-icon {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin: 0;
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* Boutons de réseaux sociaux */
+.footer .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer .btn-group .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.footer .btn-group .btn i {
+    margin-right: 10px;
+}
+
+.footer .btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+.footer .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.footer .btn-dark {
+    background-color: #333;
+    border: none;
+    color: white;
+}
+
+.footer .btn-dark:hover {
+    background-color: #1a1a1a;
+    transform: scale(1.1);
+}
+
+.footer .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+.footer .btn-danger:hover {
+    background-color: #b12b36;
+    transform: scale(1.1);
+}
+
+/* Remerciement final */
+.footer .text-muted {
+    margin-top: 40px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .footer .btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer .btn-group .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .footer .text-muted {
+        font-size: 1rem;
+    }
+}
+
+/* Bouton de retour en haut */
+.back-to-top {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.7rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.7rem;
+    }
+
+    .dashboard-section {
+        padding: 40px;
+    }
+
+    .features-section {
+        padding: 60px 0;
+    }
+
+    .btn-primary {
+        font-size: 1.1rem;
+        padding: 0.9rem;
+    }
+}
+
+/* Animation fadeIn pour un effet d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation clignotante pour les boutons "Accéder" */
+.btn-highlight {
+    animation: highlight 1.2s infinite alternate;
+}
+
+@keyframes highlight {
+    from {
+        background-color: #007bff;
+    }
+    to {
+        background-color: #0056b3;
+    }
+}

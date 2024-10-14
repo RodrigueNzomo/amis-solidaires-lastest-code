@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amis Solidaires - Inscription</title>
+    <link rel="icon" type="image/avif" href="../assets/icones/logo-primary.avif">
+    <!-- Lien vers le fichier CSS pour le style de la page d'inscription -->
+    <link rel="stylesheet" href="../css/register.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- FontAwesome CSS pour l'icône de mot de passe -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0z4UlasS0vIT1JxlzuKHCpFEL7C5fVb8mWw4DlG8eZOC13" crossorigin="anonymous">
+    <!-- Lien vers FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0z4UlasS0vIT1JxlzuKHCpFEL7C5fVb8mWw4DlG8eZOC13" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/icones/logo-symbol-only.avif" alt="Logo Amis Solidaires" class="navbar-logo">
+                Amis Solidaires
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-white bg-primary px-3 py-2 rounded me-3" href="login.html">
+                            <i class="fas fa-sign-in-alt me-1"></i> Connexion
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-white bg-success px-3 py-2 rounded" href="../index.html">
+                            <i class="fas fa-home me-1"></i> Accueil
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        </div>
+    </nav>
+
+    <!-- Section d'introduction -->
+    <div class="about-section container-fluid py-5 bg-light">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="../assets/icones/logo-secondary.avif" alt="Amis Solidaires Community"
+                        class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold text-primary">Rejoignez la plateforme Amis Solidaires</h1>
+                    <p class="lead mt-4 text-dark">Participez à un réseau communautaire qui soutient l'entraide
+                        financière.
+                        Inscrivez-vous pour bénéficier des services de cotisations, prêts, et aides à nos membres.</p>
+                    <p class="text-muted mt-3">La communauté est développée par <strong>Rodrigue Nzomo</strong>, Associé
+                        Directeur Bureau Brazzaville, Analyste-Concepteur Développeur Full Stack Java chez <strong>TMR
+                            COMPUTING CONGO LTD</strong>, certifié <strong>ODOO 17 FUNCTIONAL CERTIFICATION</strong>.
+                    </p>
+                    <a href="register.html" class="btn btn-primary btn-lg mt-3">S'inscrire Maintenant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Section d'inscription -->
+    <section class="register-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card register-card shadow-lg">
+                        <div class="card-body p-5">
+                            <div class="text-center">
+                                <img src="../assets/images/community-hands.jpeg" alt="Logo Amis Solidaires"
+                                    class="img-fluid mx-auto d-block mb-4 register-logo">
+                                <h2 class="card-title text-center mb-4">Inscription</h2>
+                            </div>
+                            <!-- Formulaire d'inscription -->
+                            <form action="#" method="post">
+                                <div class="mb-4">
+                                    <label for="name" class="form-label">Nom complet</label>
+                                    <input type="text" class="form-control form-control-lg" id="name"
+                                        placeholder="Entrez votre nom complet" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="form-label">Adresse e-mail</label>
+                                    <input type="email" class="form-control form-control-lg" id="email"
+                                        placeholder="Entrez votre e-mail" required>
+                                </div>
+                                <div class="mb-4 position-relative">
+                                    <label for="password" class="form-label">Mot de passe</label>
+                                    <input type="password" class="form-control form-control-lg" id="password"
+                                        placeholder="Entrez votre mot de passe" required>
+                                    <span class="password-toggle" id="password-toggle">
+                                        <i class="fas fa-eye" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                                <div class="mb-4 position-relative">
+                                    <label for="confirm-password" class="form-label">Confirmer le mot de passe</label>
+                                    <input type="password" class="form-control form-control-lg" id="confirm-password"
+                                        placeholder="Confirmez votre mot de passe" required>
+                                    <span class="password-toggle" id="confirm-password-toggle">
+                                        <i class="fas fa-eye" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg">S'inscrire</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Carrousel d'images -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../assets/images/community-hands.jpeg" class="d-block w-100" alt="Main Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/images/background-solidarity.jpg" class="d-block w-100" alt="Main Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/images/helping-hand.avif" class="d-block w-100" alt="Main Image 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+        </button>
+    </div>
+    <!-- Bouton Retour à l'accueil -->
+    <div class="text-center mt-5">
+        <a href="../index.html" class="btn btn-primary btn-lg rounded-pill shadow-sm px-5 py-3">
+            <i class="fas fa-home me-2"></i> Retour à l'accueil
+        </a>
+    </div>
+    <!-- Pied de page -->
+    <footer class="footer bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <!-- Logo et Remerciement -->
+            <div class="text-center mb-4">
+                <img src="../assets/images/community-hands.jpeg" alt="Communauté des Mains" class="feature-icon mb-2">
+                <p>© 2024 Amis Solidaires | Développé par Rodrigue Nzomo</p>
+            </div>
+
+
+
+            <!-- Liens de réseaux sociaux -->
+            <div class="btn-group">
+                <a href="https://www.facebook.com/nzomonzogangrodrigue/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://github.com/RodrigueNzomo" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-dark">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/rodrigue-nzogang/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="https://www.instagram.com/rodriguenzogang/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-danger">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+            <!-- Remerciement final -->
+            <div class="text-center">
+                <p class="mb-0 text-muted">Merci de nous soutenir dans cette initiative visant à promouvoir l'entraide
+                    et la
+                    solidarité à travers le numérique.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lien vers FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0z4UlasS0vIT1JxlzuKHCpFEL7C5fVb8mWw4DlG8eZOC13" crossorigin="anonymous">
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <!-- Scripts Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/register.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+/* Styles généraux */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.navbar-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: #007bff;
+    font-size: 1.4rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    margin-right: 25px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    color: #fff;
+    background-color: #007bff;
+}
+
+/* Section d'introduction */
+.about-section {
+    background-color: #adbfb0;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 3rem auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-image {
+    flex: 1;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+    flex: 2;
+    text-align: left;
+}
+
+.about-section h1 {
+    font-size: 2.8rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    animation: fadeIn 2s;
+}
+
+.about-section p {
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.6;
+    animation: fadeIn 2s;
+}
+
+/* Section de connexion */
+.login-section {
+    padding: 80px 0;
+    background-color: #e0f7fa;
+}
+
+.login-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-image: url('../assets/images/login-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.card-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.form-control {
+    border-radius: 15px;
+    padding: 1rem;
+    border: 1px solid #ced4da;
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 15px;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+/* Carrousel */
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* Pied de page */
+.footer {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    color: #333;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.footer .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer .feature-icon {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin: 0;
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* Boutons de réseaux sociaux */
+.footer .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer .btn-group .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.footer .btn-group .btn i {
+    margin-right: 10px;
+}
+
+.footer .btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+.footer .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.footer .btn-dark {
+    background-color: #333;
+    border: none;
+    color: white;
+}
+
+.footer .btn-dark:hover {
+    background-color: #1a1a1a;
+    transform: scale(1.05);
+}
+
+.footer .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+.footer .btn-danger:hover {
+    background-color: #b12b36;
+    transform: scale(1.05);
+}
+
+/* Remerciement final */
+.footer .text-muted {
+    margin-top: 40px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .footer .btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer .btn-group .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .footer .text-muted {
+        font-size: 1rem;
+    }
+
+    .about-section {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .about-section h1 {
+        font-size: 2.4rem;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Animation fadeIn pour un effet d'apparition */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Style du bouton Retour à l'accueil */
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 15px;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+/* Message de rôle sur le tableau de bord */
+.role-message {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 40px;
+    text-align: center;
+    animation: fadeIn 2s;
+}
