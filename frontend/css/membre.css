@@ -1,0 +1,55 @@
+/* membre.css */
+
+body {
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    font-family: 'Verdana', sans-serif;
+}
+
+.membre-section {
+    text-align: center;
+    padding: 50px;
+    color: #333;
+}
+
+.membre-title {
+    font-size: 34px;
+    color: #4a148c;
+}
+
+.membre-form {
+    background: #ffffff;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-field {
+    margin: 10px 0;
+    padding: 10px;
+    width: calc(100% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-membre {
+    background: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-membre:hover {
+    background: #43a047;
+}
+
+/* Image pour la section des membres */
+.membre-background {
+    background: url('../assets/imgMetier/membre.jpeg') no-repeat center;
+    background-size: cover;
+    height: 300px;
+}
+

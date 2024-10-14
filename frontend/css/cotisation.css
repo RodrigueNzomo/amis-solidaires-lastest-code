@@ -1,0 +1,52 @@
+
+/* cotisation.css */
+
+body {
+    background: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+}
+
+.cotisation-section {
+    padding: 50px;
+    color: #333;
+    text-align: center;
+}
+
+.cotisation-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #3f51b5;
+}
+
+.cotisation-description {
+    font-size: 18px;
+    margin: 20px;
+}
+
+.cotisation-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cotisation-item {
+    background: #fff;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cotisation-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Image de fond pour la section des cotisations */
+.cotisation-background {
+    background: url('../assets/imgMetier/cotisation.jpg') no-repeat center;
+    background-size: cover;
+    height: 300px;
+}
+

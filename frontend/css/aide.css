@@ -1,0 +1,54 @@
+/* aide.css */
+
+body {
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    font-family: 'Roboto', sans-serif;
+}
+
+.aide-section {
+    text-align: center;
+    padding: 50px;
+    color: #fff;
+}
+
+.aide-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+.aide-description {
+    margin: 20px auto;
+    font-size: 18px;
+    width: 80%;
+}
+
+.aide-form {
+    background: #fff;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-submit {
+    background: #FF5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-submit:hover {
+    background: #e64a19;
+}
+
+/* Image de fond de la section aide */
+.aide-background {
+    background: url('../assets/imgMetier/aide.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+}
+

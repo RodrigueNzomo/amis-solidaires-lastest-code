@@ -1,0 +1,54 @@
+/* pret.css */
+
+body {
+    background: #e3f2fd;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.pret-section {
+    padding: 50px;
+    color: #0d47a1;
+    text-align: center;
+}
+
+.pret-title {
+    font-size: 34px;
+    color: #00796b;
+}
+
+.pret-form {
+    background: #fff;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn-pret {
+    background: #00acc1;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-pret:hover {
+    background: #00838f;
+}
+
+/* Image pour la section des prêts */
+.pret-background {
+    background: url('../assets/imgMetier/pret.jpeg') no-repeat center;
+    background-size: cover;
+    height: 300px;
+}
