@@ -10,7 +10,80 @@ Coordonnées :
 - **Téléphone** : +242 065 218 412 / 05 597 41 86
 - **Adresse** : Tour Jumelle, Brazzaville, Congo
 - **Site Web** : [tmrcomputing.com](https://tmrcomputing.com)
+<!-- NKBOOK\Desktop\Amis_Solidaires 04122024>
+git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        frontend/
 
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\THINKBOOK\Desktop\Amis_Solidaires 04122024> git add .
+PS C:\Users\THINKBOOK\Desktop\Amis_Solidaires 04122024> git -m "Premier commit Frontend de mon projet perso"
+unknown option: -m
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+PS C:\Users\THINKBOOK\Desktop\Amis_Solidaires 04122024> git commit -m "Premier commit Frontend de mon projet perso"
+[main 3bd00c8] Premier commit Frontend de mon projet perso
+ 35 files changed, 2540 insertions(+)
+ create mode 100644 frontend/assets/documentation/Page 1 AM.jpeg
+ create mode 100644 frontend/assets/documentation/Premier de Couverture AM.jpeg
+ create mode 100644 frontend/assets/documentation/page 10 AM.jpeg
+ create mode 100644 frontend/assets/documentation/page 11 AM.jpeg
+ create mode 100644 frontend/assets/documentation/page 12 AM.jpeg
+ create mode 100644 frontend/assets/documentation/page 13 AM.jpeg
+ create mode 100644 frontend/assets/documentation/page 2 AM.jpeg
+ create mode 100644 frontend/assets/documentation/page 3 AM.jpeg
+ create mode 100644 frontend/assets/documentation/page 4 AM.jpeg
+ create mode 100644 frontend/assets/documentation/page 5 AM.jpeg
+ create mode 100644 frontend/assets/documentation/page 6 AM.jpeg
+ create mode 100644 frontend/assets/documentation/page 7 AM.jpeg
+ create mode 100644 frontend/assets/documentation/page 8 AM.jpeg
+ create mode 100644 frontend/assets/documentation/page 9 AM.jpeg
+ create mode 100644 frontend/assets/icones/contribution-tracking-icon.avif
+ create mode 100644 frontend/assets/icones/loan-aid-management-icon.avif
+ create mode 100644 frontend/assets/icones/logo-primary.avif
+ create mode 100644 frontend/assets/icones/logo-secondary.avif
+ create mode 100644 frontend/assets/icones/logo-symbol-only.avif
+ create mode 100644 frontend/assets/icones/member-management-icon.avif
+ create mode 100644 frontend/assets/images/background-solidarity.jpg
+ create mode 100644 frontend/assets/images/community-hands.jpeg
+ create mode 100644 frontend/assets/images/helping-hand.avif
+ create mode 100644 frontend/css/dashboard.css
+ create mode 100644 frontend/css/login.css
+ create mode 100644 frontend/css/main.css
+ create mode 100644 frontend/css/register.css
+ create mode 100644 frontend/index.html
+ create mode 100644 frontend/js/dashboard.js
+ create mode 100644 frontend/js/login.js
+ create mode 100644 frontend/js/main.js
+ create mode 100644 frontend/js/register.js
+ create mode 100644 frontend/pages/dashboard.html
+ create mode 100644 frontend/pages/login.html
+ create mode 100644 frontend/pages/register.html
+PS C:\Users\THINKBOOK\Desktop\Amis_Solidaires 04122024> echo "# amis-solidaires-lastest-code" >> README.md
+PS C:\Users\THINKBOOK\Desktop\Amis_Solidaires 04122024> git init
+Reinitialized existing Git repository in C:/Users/THINKBOOK/Desktop/Amis_Solidaires 04122024/.git/
+PS C:\Users\THINKBOOK\Desktop\Amis_Solidaires 04122024> git add README.md
+PS C:\Users\THINKBOOK\Desktop\Amis_Solidaires 04122024> git commit -m "Continuiete du premier commit"
+[main 748f1fc] Continuiete du premier commit
+ 1 file changed, 305 insertions(+), 304 deletions(-)
+PS C:\Users\THINKBOOK\Desktop\Amis_Solidaires 04122024> git branch -M main
+PS C:\Users\THINKBOOK\Desktop\Amis_Solidaires 04122024> git remote add origin https://github.com/RodrigueNzomo/amis-solidaires-lastest-code.git
+PS C:\Users\THINKBOOK\Desktop\Amis_Solidaires 04122024> git push -u origin main
+Enumerating objects: 60, done.
+Counting objects: 100% (60/60), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (58/58), done.
+Writing objects: 100% (60/60), 7.09 MiB | 383.00 KiB/s, done.
+Total 60 (delta 10), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (10/10), done.
+To https://github.com/RodrigueNzomo/amis-solidaires-lastest-code.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'. -->
 ## Table des matières
 - [Prérequis](#prérequis)
 - [Installation](#installation)
@@ -301,5 +374,6 @@ Veuillez vous assurer de mettre à jour les tests si nécessaire et de suivre no
 ## Licence
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](./LICENSE) pour plus de détails.
 
-Développé avec ❤️ par l'équipe **Amis Solidaires**.#   a m i s - s o l i d a i r e s - l a s t e s t - c o d e  
+Développé avec ❤️ par l'équipe **Amis Solidaires**.#   a m i s - s o l i d a i r e s - l a s t e s t - c o d e 
+ 
  
