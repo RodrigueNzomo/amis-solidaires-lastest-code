@@ -89,7 +89,7 @@ body {
 /* Boutons secondaires */
 .btn-secondary {
     background-color: #6c757d;
-    color: hsl(0, 85%, 32%);
+    color: #ffffff;
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
     border-radius: 15px;
@@ -151,6 +151,7 @@ body {
         padding: 12px 20px;
     }
 }
+
 .header-container {
     position: relative;
     width: 100%;
@@ -192,4 +193,8 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+.custom-image {
+    width: 150px;
 }
