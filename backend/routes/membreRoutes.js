@@ -1,30 +1,12 @@
-// backend/routes/membreRoutes.js
 const express = require("express");
-const Membre = require("../models/Membre");
-const authMiddleware = require("../middleware/authMiddleware");
+const membreController = require("../controllers/membreController");
+
 const router = express.Router();
 
-// Créer un membre
-router.post("/", authMiddleware, async (req, res) => {
-  try {
-    const membre = new Membre(req.body);
-    await membre.save();
-    res.status(201).json(membre);
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send("Erreur du serveur");
-  }
-});
-
-// Récupérer tous les membres
-router.get("/", authMiddleware, async (req, res) => {
-  try {
-    const membres = await Membre.find();
-    res.json(membres);
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send("Erreur du serveur");
-  }
-});
+// Routes
+router.post("/ajouter", membreController.ajouterMembre);
+router.get("/", membreController.getMembres);
+router.put("/:id", membreController.modifierMembre);
+router.delete("/:id", membreController.supprimerMembre);
 
 module.exports = router;

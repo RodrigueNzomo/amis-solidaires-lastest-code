@@ -1,6 +1,7 @@
 # docker-compose.yml
 
-version: '3.8'
+# version: '3.8'
+# version v2.29.2-desktop.2
 
 services:
   backend:
