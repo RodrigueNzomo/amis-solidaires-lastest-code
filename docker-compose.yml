@@ -8,15 +8,6 @@ services:
     volumes:
       - mongo-data:/data/db
 
-  backend:
-    build: ./backend
-    ports:
-      - "5000:5000"
-    environment:
-      - MONGO_URI=mongodb://mongo:27017/amis_solidaires
-    depends_on:
-      - mongo
-
   frontend:
     build: ./frontend
     ports:
@@ -28,7 +19,6 @@ services:
       - "8080:80"
     depends_on:
       - frontend
-      - backend
 
 volumes:
   mongo-data:
